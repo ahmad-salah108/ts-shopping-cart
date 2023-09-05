@@ -1,7 +1,14 @@
+import { Outlet } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import Navbar from "./pages/home/components/Navbar";
+
 function App() {
   return (
-    <div >
-      hi
+    <div>
+      <Navbar />
+      <Container>
+        <Outlet/>
+      </Container>
     </div>
   );
 }
