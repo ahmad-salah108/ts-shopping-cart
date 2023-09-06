@@ -1,15 +1,16 @@
 import { Outlet } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import Navbar from "./pages/home/components/Navbar";
+import Navbar from "./components/Navbar";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 function App() {
   return (
-    <div>
+    <ShoppingCartProvider>
       <Navbar />
       <Container>
         <Outlet/>
       </Container>
-    </div>
+    </ShoppingCartProvider>
   );
 }
 
